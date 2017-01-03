@@ -1,3 +1,3 @@
-# -*- coding: utf-8 -*-
+"""stuff from init"""
 
-from ping import *
+from py3ping.ping import *

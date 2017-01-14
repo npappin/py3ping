@@ -38,7 +38,8 @@ import time, py3ping
 
 def main (options):
   # TODO: Do something more interesting here...
-  print('Hello world! {}'.format(destination))
+  print('Hello world! {}'.format(options.destination))
+  py3ping.ping(options.destination)
 
 if __name__ == '__main__':
   try:
@@ -47,7 +48,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,description=helpDescription)
     parser.add_argument ('-v', '--verbose', action='store_true', default=False, help='Change to verbose output')
     parser.add_argument ('--version', action='store_true', default=False, help='Print version')
-    parser.add_argument ('destination', type=str, default='google.com', help='Destination to ping')
+    parser.add_argument ('destination', type=str, help='Destination to ping')
     options = parser.parse_args()
     if len(sys.argv) < 1: parser.error ('missing argument')
     if options.verbose: print(time.asctime())

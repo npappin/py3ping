@@ -1,3 +1,5 @@
-"""stuff from init"""
+"""
+stuff from init
+"""
 
-from py3ping.ping import *
+from py3ping.module import *
